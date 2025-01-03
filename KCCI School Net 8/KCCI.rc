@@ -1,0 +1,675 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\KCCI.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\KCCI.ico"
+IDI_EXIT                ICON                    "res\\exit.ico"
+IDI_RADAR               ICON                    "res\\radar.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 257, 156
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "KCCI School Net 8 Desktop Weather Client"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,7,45,15,WS_GROUP
+    CONTROL         "",IDC_Logo,"Static",SS_BITMAP,7,7,21,122
+    LTEXT           "KCCI School Net 8 Desktop Weather Client\nVersion 2.4 - Built November 21, 2005\nCopyright © 2005 by Kenneth Ballard\n\nPortions Copyright © 2002 by Ashley Rowe\nCxImage copyright © 2001 - 2004 by Davide Pizzolato\nPortions copyright © 2005 by Bruno Podetti",
+                    IDC_STATIC,35,10,170,60,NOT WS_GROUP,WS_EX_TRANSPARENT
+    LTEXT           "The School Net display background is used with permission.  Modification and/or distribution of any of the graphics contained within this application is prohibited.",
+                    IDC_STATIC,35,75,210,25
+    LTEXT           "The author of this application is in no way affiliated with KCCI or its employees.  Support for this application is provided by the author, not KCCI or its affiliates or employees.  Do not contact KCCI for support on this application.",
+                    IDC_STATIC,35,105,215,35
+END
+
+IDD_KCCI_DIALOG DIALOGEX 0, 0, 577, 310
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KCCI School Net 8"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "E&xit",IDOK,485,220,45,15
+    PUSHBUTTON      "Options",IDC_Options,515,200,45,15
+    CONTROL         149,IDC_View,"Static",SS_BITMAP,7,7,15,13
+    PUSHBUTTON      "Update",IDC_Update,485,77,45,15
+    COMBOBOX        IDC_SchoolNetStation,455,27,105,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "School Net Station",IDC_SchoolNetStationLabel,455,17,60,
+                    8
+    COMBOBOX        IDC_RadarImage,455,57,105,55,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Super Doppler Radar",IDC_RadarLabel,455,47,68,8
+    GROUPBOX        "",IDC_Border1,445,7,125,95
+    PUSHBUTTON      "School Net",IDC_SchoolNet,455,125,45,15
+    PUSHBUTTON      "Details",IDC_Details,515,125,45,15
+    PUSHBUTTON      "Radar",IDC_Radar,455,145,45,15
+    PUSHBUTTON      "Forecast",IDC_Forecast,455,165,45,15
+    PUSHBUTTON      "Compare",IDC_DataPlot,515,145,45,15
+    PUSHBUTTON      "Web Cams",IDC_WebCams,515,165,45,15
+    GROUPBOX        "",IDC_Border2,445,110,125,80
+    PUSHBUTTON      "About",IDC_About,455,200,45,15
+    CONTROL         "Progress1",IDC_Progress,"msctls_progress32",0x1,445,270,
+                    125,10
+END
+
+IDD_Options_General DIALOG  0, 0, 182, 66
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Run when Windows starts",IDC_RunStart,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,50,99,10
+    LTEXT           "Control Panel on:",IDC_STATIC,10,32,55,8
+    LTEXT           "Default View:",IDC_STATIC,10,12,43,8
+    COMBOBOX        IDC_DefaultView,60,10,115,45,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ControlPanel,70,30,105,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_Options_SchoolNet DIALOG  0, 0, 197, 90
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "School Net"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Default Station:",IDC_STATIC,10,12,50,8
+    COMBOBOX        IDC_DefaultStation,65,10,120,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Update School Net data every",IDC_STATIC,10,32,97,8
+    EDITTEXT        IDC_SchoolNetUpdate,110,30,20,12,ES_NUMBER
+    LTEXT           "minutes",IDC_STATIC,135,32,25,8
+    LTEXT           "Display time in red if more than",IDC_STATIC,10,52,96,8
+    EDITTEXT        IDC_TimeOld,110,50,20,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "hours old",IDC_STATIC,135,52,30,8
+    LTEXT           "Automatically update data plots every",IDC_STATIC,10,72,
+                    118,8
+    EDITTEXT        IDC_DataPlotUpdate,130,70,20,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "minutes",IDC_STATIC,155,72,25,8
+END
+
+IDD_Options_Radar DIALOG  0, 0, 217, 76
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Radar"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Default Radar image:",IDC_STATIC,5,12,68,8
+    COMBOBOX        IDC_DefaultRadar,80,10,120,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Update Radar image every",IDC_STATIC,5,47,86,8
+    CONTROL         "Disable automatic Radar update (recommended for dial-up)",
+                    IDC_DisableRadarUpdate,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,30,201,10
+    EDITTEXT        IDC_RadarUpdate,95,45,20,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "minutes",IDC_STATIC,120,47,25,8
+    CONTROL         "Disable automatic update when minimized",
+                    IDC_DisableWhenMinimized,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,60,147,10
+END
+
+IDD_Options_WebCam DIALOG  0, 0, 210, 55
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Web Cam"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Default Web Camera:",IDC_STATIC,10,12,69,8
+    COMBOBOX        IDC_DefaultCamera,85,10,110,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Update camera image every",IDC_STATIC,10,32,90,8
+    EDITTEXT        IDC_CameraUpdate,105,30,20,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "minutes",IDC_STATIC,130,32,25,8
+END
+
+IDD_Options_Internet DIALOG  0, 0, 202, 116
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Internet"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Use HTTP Proxy Server",IDC_UseProxy,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,10,92,10
+    LTEXT           "Proxy Server:",IDC_ProxyServerLabel,20,27,43,8
+    EDITTEXT        IDC_ProxyServer,70,25,85,12,ES_AUTOHSCROLL
+    LTEXT           "Port Number:",IDC_ProxyPortLabel,20,42,42,8
+    EDITTEXT        IDC_ProxyPort,70,40,30,12,ES_AUTOHSCROLL
+    LTEXT           "Timeout connection if not active for",IDC_STATIC,10,62,
+                    112,8
+    EDITTEXT        IDC_NetworkTimeout,125,60,20,12,ES_AUTOHSCROLL
+    LTEXT           "seconds",IDC_STATIC,150,62,28,8
+    LTEXT           "Check for an Internet connection every",IDC_STATIC,10,
+                    82,124,8,WS_DISABLED
+    EDITTEXT        IDC_InternetCheck,140,80,20,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "seconds",IDC_STATIC,165,82,28,8,WS_DISABLED
+    CONTROL         "Automatically check for a newer version",
+                    IDC_UpdateCheck,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,
+                    100,141,10
+END
+
+IDD_Splash DIALOG  0, 0, 277, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_SplashImage,"Static",SS_BITMAP,7,7,263,38
+    CTEXT           "",IDC_Status,54,47,170,8,SS_CENTERIMAGE
+    CONTROL         "Progress1",IDC_Progress,"msctls_progress32",0x1,7,58,
+                    263,13
+END
+
+IDD_Update DIALOG  0, 0, 178, 86
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Update..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,120,10,45,14
+    PUSHBUTTON      "Cancel",IDCANCEL,120,30,45,14
+    CONTROL         "School Net Station List",IDC_SchoolNetStation,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,10,88,10
+    CONTROL         "School Net Weather Data",IDC_SchoolNetData,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,25,98,10
+    CONTROL         "Radar image",IDC_Radar,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,40,56,10
+    CONTROL         "Forecast image",IDC_Forecast,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,55,64,10
+    PUSHBUTTON      "Select &All",IDC_SelectAll,120,50,45,15
+    CONTROL         "Web Camera list",IDC_Camera,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,70,67,10
+END
+
+IDD_Detailed DIALOG  0, 0, 260, 220
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Detailed Weather Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,104,199,50,14
+    CONTROL         "",IDC_View,"RICHEDIT",TCS_MULTISELECT | WS_BORDER | 
+                    WS_VSCROLL | WS_TABSTOP,7,7,246,180
+END
+
+IDD_WebCam DIALOG  0, 0, 227, 210
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "KCCI School Net 8 - Web Camera"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,88,189,50,14
+    CONTROL         "",IDC_Image,"Static",SS_BITMAP,7,7,262,154
+    COMBOBOX        IDC_Camera,66,165,140,64,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Web Camera:",IDC_STATIC,21,167,44,8
+    CONTROL         "Progress1",IDC_Progress,"msctls_progress32",0x1,7,193,
+                    76,10
+END
+
+IDD_DataPlot DIALOG  0, 0, 227, 228
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "KCCI School Net 8 - Compare Area Stations"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,88,207,50,14
+    CONTROL         "",IDC_View,"Static",SS_BITMAP,7,7,213,148
+    COMBOBOX        IDC_Station,80,165,130,60,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_Variable,80,185,130,55,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "School Net Station:",IDC_STATIC,15,167,62,8
+    RTEXT           "Variable to plot:",IDC_STATIC,25,187,50,8
+    CONTROL         "Progress1",IDC_Progress,"msctls_progress32",0x1,7,211,
+                    75,10
+END
+
+IDD_FeaturetteProgress DIALOG  0, 0, 159, 52
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Downloading featurette image...",IDC_Featurette,29,11,
+                    101,8
+    CONTROL         "Progress1",IDC_Progress,"msctls_progress32",0x1,7,26,
+                    145,15
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,3,0,1
+ PRODUCTVERSION 2,3,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "KCCI School Net 8 Desktop Weather Client"
+            VALUE "FileVersion", "2, 3, 0, 1"
+            VALUE "InternalName", "KCCI School Net 8 Desktop Weather Client"
+            VALUE "LegalCopyright", "Copyright (C) 2005 by Kenneth Ballard"
+            VALUE "OriginalFilename", "KCCI.EXE"
+            VALUE "ProductName", "KCCI School Net 8 Desktop Weather Client"
+            VALUE "ProductVersion", "2, 3, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_KCCI_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 570
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 303
+    END
+
+    IDD_Options_General, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    IDD_Options_SchoolNet, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 190
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_Options_Radar, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_Options_WebCam, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_Options_Internet, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_Splash, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_Update, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 171
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_Detailed, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+
+    IDD_WebCam, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_DataPlot, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 221
+    END
+
+    IDD_FeaturetteProgress, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 152
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+IDR_WindE               GIF                     "wind_E.gif"
+IDR_WindENE             GIF                     "wind_ENE.gif"
+IDR_WindESE             GIF                     "wind_ESE.gif"
+IDR_WindN               GIF                     "wind_N.gif"
+IDR_WindNE              GIF                     "wind_NE.gif"
+IDR_WindNNE             GIF                     "wind_NNE.gif"
+IDR_WindNNW             GIF                     "wind_NNW.gif"
+IDR_WindNW              GIF                     "wind_NW.gif"
+IDR_WindS               GIF                     "wind_S.gif"
+IDR_WindSE              GIF                     "wind_SE.gif"
+IDR_WindSSE             GIF                     "wind_SSE.gif"
+IDR_WindSSW             GIF                     "wind_SSW.gif"
+IDR_WindSW              GIF                     "wind_SW.gif"
+IDR_WindW               GIF                     "wind_W.gif"
+IDR_WindWNW             GIF                     "wind_WNW.gif"
+IDR_WindWSW             GIF                     "wind_WSW.gif"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// JPG
+//
+
+IDR_Background          JPG                     "base640.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_Options_General DLGINIT
+BEGIN
+    IDC_DefaultView, 0x403, 11, 0
+0x6353, 0x6f68, 0x6c6f, 0x4e20, 0x7465, "\000" 
+    IDC_DefaultView, 0x403, 12, 0
+0x6152, 0x6164, 0x2072, 0x6d49, 0x6761, 0x0065, 
+    IDC_DefaultView, 0x403, 15, 0
+0x6f46, 0x6572, 0x6163, 0x7473, 0x4920, 0x616d, 0x6567, "\000" 
+    IDC_ControlPanel, 0x403, 5, 0
+0x654c, 0x7466, "\000" 
+    IDC_ControlPanel, 0x403, 7, 0
+0x6f42, 0x7474, 0x6d6f, "\000" 
+    IDC_ControlPanel, 0x403, 6, 0
+0x6952, 0x6867, 0x0074, 
+    0
+END
+
+IDD_Options_Radar DLGINIT
+BEGIN
+    IDC_DefaultRadar, 0x403, 16, 0
+0x7453, 0x7461, 0x7765, 0x6469, 0x2065, 0x6152, 0x6164, 0x0072, 
+    IDC_DefaultRadar, 0x403, 12, 0
+0x654d, 0x7274, 0x206f, 0x6152, 0x6164, 0x0072, 
+    IDC_DefaultRadar, 0x403, 16, 0
+0x6f4e, 0x7472, 0x7768, 0x7365, 0x2074, 0x6152, 0x6164, 0x0072, 
+    IDC_DefaultRadar, 0x403, 16, 0
+0x6f4e, 0x7472, 0x6568, 0x7361, 0x2074, 0x6152, 0x6164, 0x0072, 
+    IDC_DefaultRadar, 0x403, 16, 0
+0x6f53, 0x7475, 0x7768, 0x7365, 0x2074, 0x6152, 0x6164, 0x0072, 
+    IDC_DefaultRadar, 0x403, 16, 0
+0x6f53, 0x7475, 0x6568, 0x7361, 0x2074, 0x6152, 0x6164, 0x0072, 
+    IDC_DefaultRadar, 0x403, 21, 0
+0x6d4f, 0x6861, 0x2061, 0x6152, 0x6164, 0x2072, 0x202d, 0x454b, 0x5654, 
+0x3720, "\000" 
+    IDC_DefaultRadar, 0x403, 27, 0
+0x614b, 0x736e, 0x7361, 0x4320, 0x7469, 0x2079, 0x6152, 0x6164, 0x2072, 
+0x202d, 0x4d4b, 0x4342, 0x3920, "\000" 
+    IDC_DefaultRadar, 0x403, 32, 0
+0x6953, 0x756f, 0x2078, 0x6146, 0x6c6c, 0x2c73, 0x5320, 0x2044, 0x6152, 
+0x6164, 0x2072, 0x202d, 0x454b, 0x4f4c, 0x3120, 0x0031, 
+    0
+END
+
+IDD_Options_WebCam DLGINIT
+BEGIN
+    IDC_DefaultCamera, 0x403, 1, 0
+"\000" 
+    0
+END
+
+IDD_KCCI_DIALOG DLGINIT
+BEGIN
+    IDC_RadarImage, 0x403, 16, 0
+0x7453, 0x7461, 0x7765, 0x6469, 0x2065, 0x6152, 0x6164, 0x0072, 
+    IDC_RadarImage, 0x403, 12, 0
+0x654d, 0x7274, 0x206f, 0x6152, 0x6164, 0x0072, 
+    IDC_RadarImage, 0x403, 16, 0
+0x6f4e, 0x7472, 0x7768, 0x7365, 0x2074, 0x6152, 0x6164, 0x0072, 
+    IDC_RadarImage, 0x403, 16, 0
+0x6f4e, 0x7472, 0x6568, 0x7361, 0x2074, 0x6152, 0x6164, 0x0072, 
+    IDC_RadarImage, 0x403, 16, 0
+0x6f53, 0x7475, 0x7768, 0x7365, 0x2074, 0x6152, 0x6164, 0x0072, 
+    IDC_RadarImage, 0x403, 16, 0
+0x6f53, 0x7475, 0x6568, 0x7361, 0x2074, 0x6152, 0x6164, 0x0072, 
+    IDC_RadarImage, 0x403, 21, 0
+0x6d4f, 0x6861, 0x2061, 0x6152, 0x6164, 0x2072, 0x202d, 0x454b, 0x5654, 
+0x3720, "\000" 
+    IDC_RadarImage, 0x403, 27, 0
+0x614b, 0x736e, 0x7361, 0x4320, 0x7469, 0x2079, 0x6152, 0x6164, 0x2072, 
+0x202d, 0x4d4b, 0x4342, 0x3920, "\000" 
+    IDC_RadarImage, 0x403, 32, 0
+0x6953, 0x756f, 0x2078, 0x6146, 0x6c6c, 0x2c73, 0x5320, 0x2044, 0x6152, 
+0x6164, 0x2072, 0x202d, 0x454b, 0x4f4c, 0x3120, 0x0031, 
+    0
+END
+
+IDD_DataPlot DLGINIT
+BEGIN
+    IDC_Variable, 0x403, 20, 0
+0x7543, 0x7272, 0x6e65, 0x2074, 0x6554, 0x706d, 0x7265, 0x7461, 0x7275, 
+0x0065, 
+    IDC_Variable, 0x403, 9, 0
+0x6544, 0x7077, 0x696f, 0x746e, "\000" 
+    IDC_Variable, 0x403, 18, 0
+0x6552, 0x616c, 0x6974, 0x6576, 0x4820, 0x6d75, 0x6469, 0x7469, 0x0079, 
+
+    IDC_Variable, 0x403, 11, 0
+0x6546, 0x6c65, 0x2073, 0x694c, 0x656b, "\000" 
+    IDC_Variable, 0x403, 20, 0
+0x6142, 0x6f72, 0x656d, 0x7274, 0x6369, 0x5020, 0x6572, 0x7373, 0x7275, 
+0x0065, 
+    IDC_Variable, 0x403, 11, 0
+0x6957, 0x646e, 0x5320, 0x6570, 0x6465, "\000" 
+    IDC_Variable, 0x403, 10, 0
+0x6957, 0x646e, 0x4720, 0x7375, 0x0074, 
+    IDC_Variable, 0x403, 17, 0
+0x6948, 0x6867, 0x5420, 0x6d65, 0x6570, 0x6172, 0x7574, 0x6572, "\000" 
+    IDC_Variable, 0x403, 16, 0
+0x6f4c, 0x2077, 0x6554, 0x706d, 0x7265, 0x7461, 0x7275, 0x0065, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDR_Splash              PNG                     "splash.png"
+IDR_Logo2               PNG                     "splash2.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TrayMenu MENU 
+BEGIN
+    POPUP "Tray"
+    BEGIN
+        MENUITEM "Main Window",                 MID_Restore
+        MENUITEM "Detailed Information",        MID_Detailed
+        MENUITEM "Web Cameras",                 MID_WebCams
+        MENUITEM "Compare",                     MID_DataPlots
+        MENUITEM "Options",                     MID_Options
+        MENUITEM SEPARATOR
+        MENUITEM "Restore",                     MID_Restore
+        MENUITEM "Exit",                        MID_Exit
+    END
+END
+
+IDR_WaitMenu MENU 
+BEGIN
+    POPUP "Wait"
+    BEGIN
+        MENUITEM "Options",                     ID_WAIT_Options
+        MENUITEM "Restore",                     ID_WAIT_Restore
+        MENUITEM "Exit",                        ID_WAIT_Exit
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_EXIT                BITMAP                  "res\\exit.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About KCCI School Net 8"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\KCCI.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
